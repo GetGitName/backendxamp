@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 31</title>
+</head>
+<body>
+    <form action="" name="form" method="POST">
+        <input type="text" name="nombre" required placeholder="Nombre"><br>
+        <input type="text" name="direccion" required placeholder="Dirección"><br>
+        <input type="text" name="ciudad" required placeholder="Ciudad"><br>
+        <input type="text" name="cp" required placeholder="Código Postal"><br>
+        <input type="email" name="correo" required placeholder="Correo electronico"><br>
+        <textarea name="comentario" placeholder="Escriba aquí su comentario" cols="30" rows="10"></textarea><br>
+        <input type="submit" value="Enviar" name="enviar">
+    </form>
+</body>
+</html>

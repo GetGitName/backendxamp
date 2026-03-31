@@ -1,0 +1,97 @@
+<?php
+
+    echo "<br> ----------- Ejercicio 7<br><br>";
+    $articulos = [];
+    $articulos[0] = "Libros";
+    $articulos[1] = "CDs";
+    $articulos[2] = "Revistas";
+    $articulos[3] = "DVDs";
+
+    echo "<br><br> ----------- Ejercicio 8 print_r()<br><br>";
+    print_r($articulos);
+
+    echo "<br><br> ----------- Ejercicio 9 var_dump()<br><br>";
+    var_dump($articulos);
+
+    echo "<br><br> ----------- Ejercicio 10 unset()<br><br>";
+    unset($articulos[2]);
+    print_r($articulos);
+
+    echo "<br><br> ----------- Ejercicio 11 array_key_exists()<br><br>";
+    $existencia = array_key_exists(1,$articulos);
+    echo "Indice 1 en existencia?: $existencia<br><br>";
+
+    echo "<br><br> ----------- Ejercicio 12 in_array()<br><br>";
+    $existencia = in_array('Libros',$articulos);
+    echo "Libros en existencia?: $existencia<br><br>";
+
+    echo "<br><br> ----------- Ejercicio 13 array_search()<br><br>";
+    $indice = array_search("DVDs",$articulos);
+    echo "El indice de DVDs es: $indice<br><br>";
+
+    echo "<br><br> ----------- Ejercicio 14 array_push()<br><br>";
+    array_push($articulos,"Laptops", "Tabletas");
+    print_r($articulos);
+
+    echo "<br><br> ----------- Ejercicio 15 array_pop()<br><br>";
+    $ultimoElemento = array_pop($articulos);
+    echo "<br>Ultimo elemento: $ultimoElemento<br>";
+    print_r($articulos);
+
+    echo "<br><br> ----------- Ejercicio 16 array_shift()<br><br>";
+    $eliminado = array_shift($articulos);
+    echo "<br>Elemento eliminado: $eliminado<br>";
+    print_r($articulos);
+
+    echo "<br><br> ----------- Ejercicio 17 array_unshift()<br><br>";
+    array_unshift($articulos, "TVs", "Estereos");
+    print_r($articulos);
+
+    echo "<br><br> ----------- Ejercicio 18 array_rand()<br><br>";
+    $nuevoArreglo = array_rand($articulos, 2);
+    echo "<br>Primer elemento aleatorio: ". $articulos[$nuevoArreglo[0]];
+    echo "<br>Primer elemento aleatorio: ". $articulos[$nuevoArreglo[1]];
+
+    echo "<br><br> ----------- Ejercicio 19 array_walk()<br><br>";
+    function imprimirArreglo($elemento, $indice){
+        echo "<br>$indice".": "." $elemento";
+    }
+    array_walk($articulos, 'imprimirArreglo');
+
+    echo "<br><br> ----------- Ejercicio 20 implode()<br><br>";
+    $numeros = ["cero", "uno", "dos", "tres", "cuatro", "cinco",];
+    $herramientas = ["libro", "lapiz", "laptop"];
+    $texto1 = implode("*", $numeros);
+    $texto2 = implode("|", $herramientas);
+    echo "<br>$texto2";
+
+    echo "<br><br> ----------- Ejercicio 21 explode()<br><br>";
+    $arreglo1 = explode("*", $texto1);
+    print_r($arreglo1);
+
+    echo "<br><br> ----------- Ejercicio 22 Arreglos asociativos<br><br>";
+    $libros = 
+        array(
+            array("titulo" => "Stoner", "autor" => "Jhon Williams", "genero" => "ficcion", "precio" => 19.99),
+            array("titulo" => "El circulo", "autor" => "Dave Eggers", "genero" => "ficcion", "precio" => 22.50),
+            array("titulo" => "Rayuela", "autor" => "Julio Cortazar", "genero" => "ficcion", "precio" => 22.50)
+        );
+
+    echo "<br><br> ----------- Ejercicio 23 array_walk_recursive()<br><br>";
+    array_walk_recursive($libros, 'imprimirArreglo');
+    
+    echo "<br><br> ----------- Ejercicio 24 array_merge()<br><br>";
+    $nuevasEdiciones = 
+        array(
+            array("titulo" => "Poesias", "autor" => "Sor Juana Ines de la Cruz", "genero" => "Poesia", "precio" => 12.99)
+        );
+    
+    $existencia = array_merge($libros, $nuevasEdiciones);
+    array_walk_recursive($existencia, 'imprimirArreglo');
+
+    echo "<br><br> ----------- Ejercicio 25 array_slice()<br><br>";
+    $descontinuados = array_slice($existencia, 0, 2);
+    array_walk_recursive($descontinuados, 'imprimirArreglo');
+
+
+?>
