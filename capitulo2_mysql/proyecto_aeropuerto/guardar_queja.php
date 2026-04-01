@@ -9,11 +9,19 @@ $fecha = date("Y-m-d");
 $hora = date("H:i:s");
 
 $sql = "INSERT INTO quejas (codigo_postal, tipo, descripcion, fecha, hora)
-        VALUES ('$cp','$tipo','$descripcion','$fecha','$hora')";
+        VALUES (:cp, :tipo, :descripcion, :fecha, :hora)";
 
-if ($conn->query($sql) === TRUE) {
+try {
+    $stmt = $conn->prepare($sql);
+    $stmt->execute([
+        ':cp' => $cp,
+        ':tipo' => $tipo,
+        ':descripcion' => $descripcion,
+        ':fecha' => $fecha,
+        ':hora' => $hora
+    ]);
     echo "Queja registrada correctamente <br><a href='resumen.php'>Ver resumen</a>";
-} else {
-    echo "Error: " . $conn->error;
+} catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
 }
 ?>
