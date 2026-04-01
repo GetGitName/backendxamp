@@ -2,6 +2,7 @@ body {
     font-family: Arial;
     background: #f4f4f4;
     margin: 0;
+    list-style: none;
 }
 
 header {
@@ -36,3 +37,123 @@ table, th, td {
 th {
     background: #ddd;
 }
+
+.container {
+    text-align: center;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 18px;
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+table tr:nth-child(even) {
+    background: #f7f9fb;
+}
+
+table tr:hover {
+    background: #e8f0fe;
+}
+
+.list-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.list-custom {
+    text-align: left;
+    max-width: 320px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.list-custom li {
+    position: relative;
+    padding: 8px 12px 8px 28px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.list-custom li::before {
+    content: "\2022";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0073e6;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.form-card {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.form-card h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #003366;
+}
+
+.form-card label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-card input[type="text"],
+.form-card select,
+.form-card textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 14px;
+    border: 1px solid #bdbdbd;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.form-card textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-card button {
+    width: 100%;
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form-card button:hover {
+    background: #005bb5;
+}
+

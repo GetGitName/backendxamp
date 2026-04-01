@@ -2,7 +2,7 @@
 include("includes/header.php");
 include("config/db.php");
 
-echo "<h2>Resumen de quejas</h2>";
+echo "<div class='container'><div class='form-card'><h2>Resumen de quejas</h2>";
 
 echo "<p>
 Todos los días hacemos lo que esta a nuestro alcance para hacer que un residente quede satisfecho.
@@ -12,7 +12,7 @@ Por favor, use nuestra línea directa para reportar dicha queja.
 
 $result = $conn->query("SELECT * FROM quejas");
 
-echo "<table>
+echo "<div class='table-wrapper'><table>
 <tr>
 <th>Número</th>
 <th>Código Postal</th>
@@ -31,7 +31,7 @@ while($row = $result->fetch(PDO::FETCH_ASSOC)) {
     </tr>";
 }
 
-echo "</table>";
+echo "</table></div></div></div>";
 
 include("includes/footer.php");
 ?>
