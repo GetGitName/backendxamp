@@ -16,6 +16,6 @@ if($pagina){
     include("paginas/" . $pagina . ".php");
 } 
 
-
+echo '<div class="canasta" id="canasta"></div>';
 
 ?>

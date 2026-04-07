@@ -77,3 +77,47 @@ li:hover {
     width: 20%;
     font-size: 1.0rem;
 }
+
+.contenido {
+    float: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    font-size: 1.0rem;
+}
+
+#titulo_de_pagina {
+    margin: 0;
+    padding: 0;
+    padding-top: 5%;
+    font-size: 1.5rem;
+    color: blue;
+}
+
+#aviso {
+    color: red;
+    font-size: 1.0rem;
+}
+
+form {
+    width: 100%;    
+}
+
+input {
+    float: none;
+    height: 25px;
+    width: 100%;
+    border: none;
+    display: block;
+    color: rgb(33, 33, 33);
+    background-color: #C2F98E;
+    border-radius: 5px;
+    margin-bottom: 4%;
+    text-align: center;
+    font-size: 1.0rem;
+}
+
+input:hover {
+    background-color: #D8F9B6;
+}
