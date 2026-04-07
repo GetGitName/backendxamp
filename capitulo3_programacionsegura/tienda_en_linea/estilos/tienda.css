@@ -2,7 +2,6 @@ body {
     font-family: "Roboto 2", "Helvetica Neue";
     background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
     text-align:center;
     font-size: 14px;
 }
@@ -101,7 +100,7 @@ li:hover {
 }
 
 form {
-    width: 100%;    
+    width: 60%;    
 }
 
 input {
@@ -120,4 +119,5 @@ input {
 
 input:hover {
     background-color: #D8F9B6;
+    cursor: pointer;
 }

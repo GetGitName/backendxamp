@@ -6,7 +6,7 @@
         <div class="contenedorIcon">
             <input type="submit" class="icon" id="enviar" name="enviar" value="&rarr;">
         </div>
-        <a href="registrar.php">Registrate</a>
+        <a href="registrar.php">Registrate</a><br>
         <a href="solicitar_contrasenia.php"> Olvidaste tu contraseña</a>
     </form>
 </div>
