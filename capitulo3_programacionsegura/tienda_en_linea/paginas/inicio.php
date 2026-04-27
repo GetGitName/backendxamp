@@ -25,13 +25,13 @@ if(isset($_POST['enviar'])){
         
         if($resultado){
             
-            $contraseniaEnBaseDeDatos = $resultado['contrasenia'];            
+            $contraseniaEnBaseDeDatos = $resultado['contrasena'];            
             $rol = $resultado['rol'];            
             
             if(password_verify($contrasenia, $contraseniaEnBaseDeDatos)){
                 
                 $_SESSION['ID'] = session_id();
-                $_SESSION['NUMERO_DE_CLIENTE'] = $resultado['numero_de_cliente'];
+                $_SESSION['NUMERO_DE_CLIENTE'] = $resultado['numero'];
                 $_SESSION['USUARIO'] = $resultado['nombre'];
                 $_SESSION['ROL'] = $rol;
                 $_SESSION['CORREO'] = $resultado['correo_electronico'];
