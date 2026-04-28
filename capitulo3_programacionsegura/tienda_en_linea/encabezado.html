@@ -9,7 +9,7 @@
         function confirmarSalida() {
             var salir = confirm("¿Estás seguro de que deseas salir de la tienda?");
             if(salir){
-                location.href = "index.php/?pagina=salir"; // Redirige a Google o a cualquier otra página
+                location.href = "index.php?pagina=salir"; // Redirige a Google o a cualquier otra página
             }
             //return confirm("¿Estás seguro de que deseas salir de la tienda?");
         }
@@ -21,7 +21,14 @@
             <div class="icon">&#x266c</div>
         </div>
         <?php
-            if(isset($_SESSION['ID']) && $_SESSION['STATUS'] != "ACTIVA"){
+            /*echo $_SESSION['ID'];
+            echo "<br>";
+            echo isset($_SESSION['ID']);
+            echo "<br>";
+            echo $_SESSION['STATUS'];
+            echo "<br>";
+            echo $_SESSION['ROL'];*/
+            if(isset($_SESSION['ID']) && $_SESSION['STATUS'] == "ACTIVA"){
                 if($_SESSION['ROL'] == 0){
                     ?>
 
