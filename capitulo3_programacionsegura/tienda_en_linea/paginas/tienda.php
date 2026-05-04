@@ -18,7 +18,7 @@
     <script src="javascript/tienda.js"></script> 
     <div class="contenido">
         <form name="busqueda" id="busqueda" action="" method="POST">
-            <div style="background-color: #C2F98E; height: 25px; margin-top: 5%; padding: 0;">
+            <div style="background-color: #C2F98E; height: 25px; margin-top: 5px; padding: 0;">
                 <input type="text" style="float:left; width:70%;" id="patron" name="patron" placeholder="Buscar álbumes..."/>
                 <input type="submit" style="float:none; width:10%;font-size:1.2rem;" id="buscar" name="buscar" value="&#128270;"/>
                 <br/>
