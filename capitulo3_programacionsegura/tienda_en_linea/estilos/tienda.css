@@ -121,3 +121,56 @@ input:hover {
     background-color: #D8F9B6;
     cursor: pointer;
 }
+
+/* Ejercicio 2.23 */
+#botonDeCanasta {
+    display: none;
+}
+
+#botonDeCanasta + label {
+    font-size: 3.5rem;
+}
+
+#canasta {
+    text-align: center;
+    z-index: 3;    
+    position: fixed;
+    display: none;
+    bottom: 40%;
+    right: 0;
+    left: 0;
+    height: 20%;
+    visibility: hidden;
+    width: 100%;
+    background-color: #C2F98E;
+    border-radius: 5%;
+    opacity: 0.9;
+    filter: alpha(opacity=9);
+}
+
+#renglones {
+    visibility: hidden;
+    padding: 0;
+    margin: 0;
+    width: 100%;    
+}
+
+form > .cantidad {
+    width: 30px;
+    height: 20px;
+    margin-right: auto;
+    border: solid 1px gray;    
+}
+
+.agregar {
+    text-decoration: none;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #70c26f;
+    color: #fff;
+    font-size: 2.5rem;   
+}
