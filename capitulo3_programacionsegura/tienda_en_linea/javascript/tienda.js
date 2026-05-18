@@ -3,9 +3,11 @@ function mostrarCanasta() {
     if(document.oferta.botonDeCanasta.checked) {
         document.getElementById("canasta").style.visibility = "visible";
         document.getElementById("renglones").style.visibility = "visible";
+        console.log("entro a checked");
     } else {
         document.getElementById("canasta").style.visibility = "hidden";
         document.getElementById("renglones").style.visibility = "hidden";
+        console.log("entro a unchecked");
     }
     
     renglones=

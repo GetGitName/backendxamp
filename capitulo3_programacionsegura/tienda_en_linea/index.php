@@ -17,6 +17,6 @@ if($pagina){
 } 
 
 //echo '<div class="canasta" id="canasta"></div>';
-include_once("canasta.html");
+include_once("canasta.php");
 
 ?>

@@ -1,9 +1,7 @@
 <?php
 
-    if(isset($_SESSION['ID']) && $_SESSION['STATUS'] != 'ACTIVA'){
-        
+    if(isset($_SESSION['ID']) && $_SESSION['STATUS'] != 'ACTIVA'){    
         echo "<script>alert('No estas autorizado para ver esta página');location.href = '../index.php';</script>";
-
     }
 
     if(isset($_POST['enviar'])){

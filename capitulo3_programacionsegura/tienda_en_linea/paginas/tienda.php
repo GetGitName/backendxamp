@@ -41,6 +41,7 @@
                 foreach ($albums as $album) {
 
                     echo "<img width='100px' src='imagenes/" . $album['portada'] . "' alt='Portada de " . htmlspecialchars($album['portada']) . "'/>";
+                    echo "<input type='hidden' name='numero_de_album[$iteracion]' id='numero_de_album[$iteracion]' value='" . htmlspecialchars($album['numero_de_album']) . "'/>";
                     echo "<input type='hidden' name='titulo[$iteracion]' id='titulo[$iteracion]' value='" . htmlspecialchars($album['titulo']) . "'/>";
                     echo "<input type='hidden' name='artista[$iteracion]' id='artista[$iteracion]' value='" . htmlspecialchars($album['artista']) . "'/>";
                     echo "<input type='hidden' name='genero[$iteracion]' id='genero[$iteracion]' value='" . htmlspecialchars($album['genero']) . "'/>";
@@ -58,7 +59,7 @@
             <label for="botonDeCanasta" class="icon">&#128717;</label>
             <br><br>
             <div class="contenedorIcon">
-                <input type="submit" name="ordenar" id="enviar" class="icon" value="&rarr;"/>
+                <input type="submit" name="enviar" id="enviar" class="icon" value="&rarr;"/>
             </div><br>
         </form>
     </div>
